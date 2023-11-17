@@ -28,6 +28,7 @@ const RightArrow = () => {
 const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyParts }) => {
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+      <div className="flex overflow-hidden">
       {data.map((item) => (
         <div
           key={item.id || item}
@@ -46,6 +47,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyParts }) => {
           )}
         </div>
       ))}
+      </div>
     </ScrollMenu>
   );
 };
